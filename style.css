@@ -1,0 +1,25 @@
+* {
+  margin: 0;
+  box-sizing: border-box;
+}
+body {
+  background-color: darkslateblue;
+  color: aliceblue;
+  min-height: 100vh;
+  font-family: Georgia, "Times New Roman", Times, serif;
+  flex-direction: column;
+}
+header {
+  border: 5px solid red;
+}
+main {
+  flex: auto;
+  border: 5px solid rgb(236, 227, 101);
+}
+footer {
+  border: 5px solid rgb(6, 165, 32);
+  display: flex;
+}
+footer input {
+  flex: auto;
+}
