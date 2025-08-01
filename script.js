@@ -1,9 +1,24 @@
-        function add() {
-  const ul = document.querySelector("ul");
+// estado da aplicação
+const tarefas = ["Estudar HTML", "Estudar CSS", "Estudar REACT"];
+
+// alteradores de estado
+function add() {
   const input = document.querySelector("input");
   const tarefa = input.value;
-  const li = document.createElement("li");
-  li.innerText = tarefa;
-  ul.appendChild(li);
+  tarefas.push(tarefa);
   input.value = "";
+  render();
 }
+// Mostrar na tela
+function render() {
+  const ul = document.querySelector("ul");
+  ul.innerHTML = null;
+
+  tarefas.forEach(function (tarefa) {
+    const li = document.createElement("li");
+    li.innerText = tarefa;
+    ul.appendChild(li);
+  });
+}
+//iniciar
+render();
